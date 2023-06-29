@@ -145,7 +145,7 @@ export default function About () {
         </div>
         <div className='about-image'>
           <div className='overlay'></div>
-          <Image src="/about_image.jpeg" alt="pic" width={300} height={200} />
+          <img src="/about_image.jpeg" alt="pic"  className='img' />
         </div>
       </motion.div>
     </div>
