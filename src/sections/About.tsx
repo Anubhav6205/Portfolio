@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image';
 export default function About () {
   const [hoveredWord, setHoveredWord] = useState('')
   return (
@@ -144,7 +145,7 @@ export default function About () {
         </div>
         <div className='about-image'>
           <div className='overlay'></div>
-          <img src='/about_image.jpeg' alt='pic' />
+          <Image src="/about_image.jpeg" alt="pic" width={300} height={200} />
         </div>
       </motion.div>
     </div>

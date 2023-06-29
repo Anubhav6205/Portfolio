@@ -33,7 +33,7 @@ export default function Cursor() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, );
 
   useEffect(() => {
     const handleScroll = () => {
