@@ -181,7 +181,7 @@
         }
       
         img {
-          width:calcmax(55vw,220px);
+          width:max(25vw,220px);
           height: auto;
           transition: .2s ease;
           filter: grayscale(100%);
