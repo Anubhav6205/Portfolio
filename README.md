@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Portfolio Website
 
-## Getting Started
+This is the repository for my personal portfolio website. It showcases my skills, projects, and provides an interactive platform for visitors to learn more about me. The website is built using modern tech stacks, including Next.js, SCSS, TypeScript, Framer Motion, and Node.js. It is deployed using Vercel, ensuring a seamless and reliable hosting experience.
 
-First, run the development server:
+Tech Stack:-
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Frontend:
+The frontend of the portfolio website is built using the following technologies:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js: Next.js is a popular React framework that enables server-side rendering (SSR), static site generation (SSG), and client-side rendering (CSR) for optimal performance and SEO benefits.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+SCSS: SCSS (Sass) is a powerful CSS preprocessor that allows for the use of variables, mixins, and nested rules, enhancing code maintainability and reusability.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+TypeScript: TypeScript is a strongly typed superset of JavaScript that provides static typing, enabling better code quality, enhanced productivity, and improved developer experience.
 
-## Learn More
+Framer Motion: Framer Motion is a flexible animation library for React that simplifies the process of creating smooth and interactive animations, adding a dynamic touch to the user interface.
 
-To learn more about Next.js, take a look at the following resources:
+Backend:
+The backend of the portfolio website leverages the following technology:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Node.js: Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows for server-side scripting and enables the development of scalable and high-performance web applications.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Deployment:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The portfolio website is deployed using Vercel, a cloud platform for static sites and serverless functions. Vercel provides a simple and intuitive deployment process, ensuring that the website is easily accessible and consistently available to visitors.
