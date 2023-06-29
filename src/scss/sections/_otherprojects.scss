@@ -1,0 +1,222 @@
+.other-projects-container {
+    color: rgb(223, 19, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    margin: 5rem 0;
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+
+            font-family: var(--raleway);
+            color:var(--dark-white);
+        }
+
+        .sub-title {
+            a {
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 400;
+
+                font-family: var(--raleway);
+                color: var(--theme-color);
+
+                &::after {
+                    content: "";
+
+                    height: 1px;
+                    background-color: rgba(145, 154, 79, 0.775);
+                    display: block;
+                    width: 0%;
+                    transition: 0.2s ease-in;
+                    margin: 0.2rem 0 0 0;
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .other-projects-lists {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .other-projects-box {
+            text-decoration: none;
+
+
+            padding: 40px 30px;
+            height: auto;
+            width: 300px;
+            background-color: rgba(28, 47, 3, 0.56);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            transition: .2s ease-in-out;
+
+            &:hover {
+          
+                transform: translateY(-5px);
+
+                .other-projects-content {
+                    .other-projects-title {
+                        color: var(--theme-color);
+                    }
+                }
+            }
+
+            .icons {
+                display: flex;
+                justify-content: space-between;
+
+                .folder-icon {
+                    color: var(--theme-color);
+                    font-size: 2.5rem;
+                   
+                    transition: 0.3s ease-in-out;
+
+                    
+                    a {
+
+                        color: var(--theme-color);
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            color: var(--lightest-slate);
+                        }
+                    }
+                }
+
+                .social-icon {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    font-size: 1.4rem;
+
+                    a {
+                        color: var(--mid-white);
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            color: var(--theme-color);
+                        }
+                    }
+                }
+
+            }
+
+            .other-projects-content {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+
+                .other-projects-title {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    font-family: var(--raleway);
+                    color: var(--mid-white);
+                  
+                    transition: 0.3s ease-in-out;
+
+                }
+
+                .other-projects-description {
+                    font-size: .9rem;
+                    font-weight: 400;
+                    font-family: var(--fira-code);
+                    color: var(--light-white);
+
+
+                }
+            }
+
+            .other-projects-tech {
+
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+
+                .other-projects-tech-list {
+                    list-style-type: none;
+                    display: flex;
+                    gap: 1rem;
+
+
+
+                    .other-projects-tech-list-item {
+                        font-size: .7rem;
+                        font-family: var(--fira-code);
+                        color: var(--mid-white);
+
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
+
+// Media query for screens with a maximum width of 768px
+@media only screen and (max-width: 1200px) {
+    .other-projects-container{
+        .titles{
+
+            .title {
+                font-size: 1.8rem;
+            }
+            .sub-title a {
+                font-size: 0.9rem;
+            }
+            
+        }
+
+        .other-projects-lists{
+            grid-template-columns: 1fr;
+            gap:3rem;
+
+            .other-projects-box{
+                width:100%;
+                padding:2rem;
+                height:auto;
+
+                .other-projects-content{
+                    .other-projects-title{
+                        font-size:1.2rem;
+                    }
+                    .other-projects-description{
+                        font-size:.8rem;
+                    }
+                }
+            }
+          
+
+        }
+        
+    }
+   
+}
+

@@ -1,0 +1,55 @@
+.email
+{
+    position: fixed;
+    bottom: 0;
+    right:2rem;
+   
+    
+ 
+
+    .email-link{
+        writing-mode: vertical-lr;
+        text-decoration: none;
+        color:  var(--mid-white);
+       
+
+        font-family: var(--fira-code);
+        transition: .2s ease-in;
+
+        padding:10px;
+        letter-spacing: 1.1px;
+        outline:2px dashed transparent;
+        font-size: .8rem;
+        &:hover{
+            color: var(--theme-color);
+            transform: translateY(-5px);
+
+        }
+
+        &:focus{
+            outline: var(--theme-color);
+        }
+
+    }
+
+    &::after{
+        content: "";
+        //making sure psudo elemwent is set as a block level element
+        display: block;
+        width: 2px;
+        height:5rem;
+        background-color:  var(--mid-white);
+        margin:0 auto;
+
+
+
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .email{
+        display: none;
+    }
+        
+}

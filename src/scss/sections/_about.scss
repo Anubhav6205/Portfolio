@@ -1,0 +1,233 @@
+.about-container {
+  color: rgb(194, 45, 45);
+  
+  .about-title {
+    position: relative;
+    height: 110vh;
+    font-family: var(--raleway);
+    font-size: 3rem;
+    .title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      color:  var(--dark-white);
+      transition: color 0.3s;
+      .hovered-word {
+        color: var(--theme-color);
+        transition: color 0.5;
+      }
+    }
+  }
+  .about-main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    
+    
+
+    .about-image {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    
+      .overlay {
+        position: absolute;
+        height: 80vh;
+        width:26vw;
+        top: 12.5vh;
+        left: 1.5vw;
+        z-index: -1;
+        border: 2px solid rgb(137, 159, 14);
+        transition: all .4s ease;
+        background-color: rgba(245, 222, 179, 0.121);
+      }
+
+      
+    
+      &:hover {
+        .overlay {
+          top: 11.6vh;
+          left: 1.2vw;
+        }
+      }
+    
+      img {
+        height: 80vh;
+        border-radius: 1%;
+        object-fit: fill;
+      }
+    }
+    
+
+    .about-text {
+      padding: 0 5rem 0 0rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    
+   
+
+      .heading {
+        font-family: var(--raleway);
+        font-size: 1.6rem;
+        display: flex;
+        color:  var(--dark-white);
+        align-items: center;
+      
+
+        &::before {
+          counter-increment: counter-title;
+          content: "0" counter(counter-title) ".";
+          color: var(--theme-color);
+          padding: 0 0.5em 0 0;
+        }
+
+        &::after {
+          content: "";
+          background-color: var(--light-white);
+          display: inline-block;
+          height: 1px;
+          width: 10%;
+          margin-left: 1rem;
+        }
+      }
+
+      .title {
+        font-family: var(--raleway);
+        font-size: 1.5rem;
+        margin: 3rem 0 0 0;
+        color:  var(--mid-white);
+        font-weight: 500;
+      }
+
+      .subtitle {
+        font-family: var(--fira-code);
+        font-size: 1rem;
+        margin: 1rem 0;
+        color:  var(--light-white);
+        font-weight: 100;
+        .highlight {
+          color:  var(--dark-white);
+          font-weight: 400;
+        }
+      }
+
+      .description {
+        font-family: var(--fira-code);
+        font-size: 1rem;
+        margin: 1rem 0;
+        color:  var(--light-white);
+        font-weight: 100;
+        .highlight {
+          color:  var(--dark-white);
+          font-weight: 400;
+        }
+      }
+
+      .technologies {
+        .technologies-title {
+          font-family: var(--raleway);
+          margin: 2rem 0 1rem 0;
+          font-size: 1.2rem;
+          color:  var(--mid-white);
+        }
+        .technologies-list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          list-style-type: none;
+          font-family: var(--fira-code);
+          gap: 0.7rem;
+          color:  var(--mid-white);
+          li {
+            &::before {
+              content: ">";
+              color: var(--theme-color);
+              padding: 0 0.5rem 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width:1200px) {
+  .about-container {
+  
+    
+    
+    .about-main {
+    
+      height: fit-content;
+      grid-template-columns: 1fr;
+      .about-image {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        .overlay {
+          display: none;
+          
+
+        
+          
+         
+        }
+      
+        img {
+          width:max(25vw,220px);
+          height: auto;
+          transition: .2s ease;
+          filter: grayscale(100%);
+          border-radius: .2rem;
+          margin-top: 2rem;
+          
+      
+
+     
+        
+          &:hover {
+        
+            transform: translateY(-5px) scale(1.01);
+            filter: brightness(80%);
+            filter: grayscale(10%);
+           
+          }
+        }
+      }
+      .about-text {
+        padding: 0;
+        .heading {
+          font-size: 1.2rem;
+          &::after {
+            width: 20%;
+          }
+        }
+        .title {
+          font-size: 1.2rem;
+        }
+        .subtitle {
+          font-size: 0.8rem;
+        }
+        .description {
+          font-size: 0.8rem;
+        }
+        .technologies {
+          .technologies-title {
+            font-size: 1.2rem;
+          }
+          .technologies-list {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+  
+}

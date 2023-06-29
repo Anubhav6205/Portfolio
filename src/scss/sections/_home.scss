@@ -1,0 +1,117 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+.home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image-container {
+    height: 60vh;
+    width: 30vw;
+    background-image: url('../../../public/cartoon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+
+    
+
+  }
+  .image-hovered {
+    height: 60vh;
+    width: 30vw;
+    background-size: cover;
+    background-image: url('../../../public/real.png');
+  }
+
+}
+
+  .home-left {
+    flex: 2;
+    font-family: var(--raleway);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .lower-home {
+
+      letter-spacing: 2px;
+      word-wrap: break-word;
+      color: var(--light-white);
+      font-family: var(--fira-code);
+
+      .description {
+        .highlight {
+          color: var(--theme-color);
+        }
+      }
+    }
+  }
+}
+
+
+
+.upper-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+  .main-title h2 {
+    font-size: 2.5rem;
+    color: var(--dark-white)
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+    color: var(--mid-white);
+
+    .word {
+      transition: color 0.3s;
+    }
+  }
+
+}
+
+
+
+
+
+.sub-title .word.active {
+  color: var(--theme-color);
+}
+
+.upper-home:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .home-container .home-right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    height: 60vh
+  }
+
+  .upper-home {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+  }
+
+  .main-title h2 {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,41 @@
+body {
+  background-color: var(--background-color);
+  counter-reset: counter-title;
+}
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor:none;
+}
+
+@media screen and (max-width:500px) {
+  *{
+      cursor:auto
+  }
+  
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-slate) var(--background-color);
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+::selection{
+  background-color: rgba(119, 66, 192, 0.798);
+}
+
+::-ms-selection{
+  background-color: rgba(119, 66, 192, 0.798);
+  
+}

@@ -1,0 +1,19 @@
+.button{
+    color: var(--theme-color);
+    padding:0.75rem 1rem;
+    border:1px solid var(--theme-color);
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: var(--raleway);
+    font-size: .8rem;
+    transition: .2s ease-in;
+    outline: none;
+    &:hover{
+        background-color:  rgba(34, 93, 123, 0.286);
+    
+    }
+
+    &:focus{
+        background-color: var(--lightest-navy);
+    }
+}

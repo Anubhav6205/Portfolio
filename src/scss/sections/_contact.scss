@@ -1,0 +1,113 @@
+.contact-container {
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    .title {
+
+        h2 {
+            font-family: var(--raleway);
+            font-size: 1.6rem;
+
+            color:var(--dark-white);
+
+            display: flex;
+            align-items: center;
+
+            &::before {
+                counter-increment: counter-title;
+
+                content: "0"counter(counter-title) ".";
+                color: var(--theme-color);
+                padding: 0 0.5em 0 0;
+            }
+
+            &::after {
+                content: "";
+                width: 30%;
+                background-color:var(--light-white);
+                height: 1px;
+                display: block;
+                margin-left: 2rem;
+
+
+            }
+        }
+    }
+
+    .contact {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .quote {
+            
+            font-family: var(--raleway);
+            font-size: 2rem;
+           
+            margin: 2rem 0;
+            text-align: center;
+            p{
+                color: var(--mid-white);
+                font-size: 4rem;
+
+            }
+        }
+
+        .button {
+            padding: 1.3rem 1.5rem;
+        }
+
+    }
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-container {
+        padding: 2rem 0;
+
+        .title {
+
+            h2 {
+                font-size: 1.5rem;
+
+              
+            }
+        }
+
+        .contact .quote {
+            font-size: 3rem;
+        }
+
+        .contact .button {
+            padding: 1rem 1.2rem;
+        }
+    }
+}
+
+// Media query for screens with a minimum width of 1200px
+@media only screen and (min-width: 1200px) {
+    .contact-container {
+        padding: 8rem 0;
+
+        .title {
+            font-size: 3rem;
+
+         
+        }
+
+        .contact .quote {
+            font-size: 6rem;
+        }
+
+        .contact .button {
+            padding: 1.5rem 2rem;
+        }
+    }
+}
