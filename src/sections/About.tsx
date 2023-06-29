@@ -1,26 +1,20 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image';
+import Image from 'next/image'
+import Link from 'next/link'
 export default function About () {
   const [hoveredWord, setHoveredWord] = useState('')
   return (
-    <div
-      className='about-container'
-      id='about'
-  
-    >
+    <div className='about-container' id='about'>
       <div className='about-title'>
         <h2 className='title'>
           <motion.span
-           initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-      
-        
-
-        
-           transition={{duration:2}}
-           exit={{ opacity: 0 }}
-           >
-            <p >
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            exit={{ opacity: 0 }}
+          >
+            <p>
               <span
                 onMouseEnter={() => setHoveredWord('I')}
                 onMouseLeave={() => setHoveredWord('')}
@@ -95,14 +89,17 @@ export default function About () {
           </motion.span>
         </h2>
       </div>
-      <motion.div className='about-main'
-      initial={{ opacity: 0,y:300 }} whileInView={{ opacity: 1,y:0 }}
-      transition={{duration:1}}
-      viewport={{ once: true }}>
+      <motion.div
+        className='about-main'
+        initial={{ opacity: 0, y: 300 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <div className='about-text'>
           <h2 className='heading'>The Mysterious Being Behind the Screen</h2>
           <h2 className='title'>Hi, I`m Anubhav!</h2>
-          <p className='subtitle'>
+          {/* <p className='subtitle'>
             I`m a passionate web developer with{' '}
             <span className='highlight'>
               top-notch programming and design skills
@@ -110,6 +107,25 @@ export default function About () {
             . My expertise lies in developing next-level websites and web
             applications, with a strong focus on creating captivating frontend
             designs.
+          </p> */}
+
+          <p className='subtitle'>
+            I&#39;m not your average web developer. I&#39;m a coding wizard with
+            decent design skills. Survived{' '}
+            <span className='highlight'>
+              <Link href='https://www.shschianki.com/'>
+                {' '}
+                Sacred Heart School
+              </Link>
+            </span>
+            , currently acing my B.Tech in Computer Science at{' '}
+            <span className='highlight'>
+              <Link href='https://kiit.ac.in/'>KIIT University</Link>
+            </span>
+            . Oh, and did I mention that I currently boast an impressive CGPA of{' '}
+            <span className='highlight'> 9.13 </span>? Brace yourself for
+            awe-inspiring websites and web applications that will leave you
+            speechless!
           </p>
           <p className='description'>
             I define myself{' '}
@@ -119,8 +135,8 @@ export default function About () {
             <span className='highlight'>
               continuous learning, embracing challenges, and pursuing meaningful
               endeavors
-            </span>{'.'}
-            
+            </span>
+            {'.'}
           </p>
 
           <div className='technologies'>
@@ -145,7 +161,7 @@ export default function About () {
         </div>
         <div className='about-image'>
           <div className='overlay'></div>
-          <img src="/about_image.jpeg" alt="pic"  className='img' />
+          <img src='/about_image.jpeg' alt='pic' className='img' />
         </div>
       </motion.div>
     </div>

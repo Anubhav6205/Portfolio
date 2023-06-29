@@ -114,6 +114,10 @@
         .highlight {
           color:  var(--dark-white);
           font-weight: 400;
+          a{
+            color:  var(--theme-color);
+            text-decoration: none;
+          }
         }
       }
 
