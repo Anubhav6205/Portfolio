@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineGithub } from 'react-icons/Ai'
+import { AiOutlineGithub } from 'react-icons/ai'
 import { FiLinkedin, FiTwitter } from 'react-icons/fi'
 import { BsInstagram } from 'react-icons/bs'
 import Link from 'next/link'
