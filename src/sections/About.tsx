@@ -36,7 +36,7 @@ export default function About () {
                 }`}
               >
                 {' '}
-                desgin
+                design
               </span>
               <span
                 onMouseEnter={() => setHoveredWord('&')}
