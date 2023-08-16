@@ -125,7 +125,7 @@ export default function Navbar () {
               delay: 0.6
             }}
           >
-            <Button text='Resume' link='http://localhost:3000/myresume.pdf' />
+            <Button text='Resume' link='https://drive.google.com/file/d/1HYbH4DPwmjh1zQBwtKSLdIlfVLR39o3p/view?usp=sharing' />
           </motion.div>
         </div>
       </div>
